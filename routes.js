@@ -35,7 +35,7 @@ router.post('/botHandler',function(req, res){
               "attachment": {
                 "type": "template",
                 "payload": {
-                  "template_type": "button",
+                  "template_type": "generic",
                   "text": "Click for Information",
                   "buttons": [
                     {
