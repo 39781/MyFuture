@@ -12,10 +12,19 @@ router.get('/',function(req, res){
 router.post('/botHandler',function(req, res){
 	//console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
 	console.log('Dialogflow Request body: ' + JSON.stringify(req.body));	
-	var contextParams ={
+	let contextParams;
+	if(req.body.result.contexts.length>0){
+		contextParams ={
 			qualification:req.body.result.contexts[0].parameters.qualification.toLowerCase(),
 			infoType:req.body.result.contexts[0].parameters.infotype.toLowerCase()
-	}	
+		}	
+	}else{
+		contextParams ={
+			qualification:req.body.result.parameters.qualification.toLowerCase(),
+			infoType:req.body.result.parameters.infotype.toLowerCase()
+		}
+	}
+	
 	processRequest(contextParams)
 	.then((resp)=>{	
 		console.log(careerConfig.webview);
