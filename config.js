@@ -1,136 +1,129 @@
-module.exports = {
+module.exports = {	
 	"ssc":{
+		"jobs":{                    
+			collapsed: true,
 			text: {
-				name: "SSC",
-				title: ""				
-			},            
-            children: [
-                {                    
-                    collapsed: true,
-                    text: {
-								name: "Jobs",
-								title: ""								
-							},
-							children: [
-								{
-									text: {
-										name: "NAVY",
-										title: "Indian Navy"								
-									},
-									children: [
-										{
-											text: {
-												name: "DYA",
-												title: "Dock Yard Apprentices"								
-											}                            
-										},
-										{
-											text:{
-												name: "Sailors",
-												title: "sailors",
-											}                            
-										},
-										{
-											text:{
-												name: "AA",
-												title: "Artificer Apprentices",
-											}										
-										}
-									]									
-								},
-								{
-									text:{
-										name: "ARMY",
-										title: "Indian Army"								
-									},
-									children: [
-										{
-											text: {
-												name: "IASC",
-												title: "Indian Army Soldier Clerks Examination"								
-											}                            
-										},
-										{
-											text:{
-												name: "N.E.R.",
-												title: "Indian Army Soldier General Duty"								
-											}                            
-										},
-										{
-											text:{
-												name: "M.E.R.",
-												title: "Indian Army Soldier Technical"								
-											}                            
-										},
-										{
-											text:{
-												name: "M.E.R.",
-												title: "Indian Army Soldier Nursing Assistants"								
-											}                            
-										}
-										
-									]									
-								},
-								{
-									text:{
-										name: "Police Force",
-										title: "Indian Police"								
-									},
-									children: [
-										{
-											text: {
-												name: "CRPF",
-												title: "Central Reserve Police Force"								
-											}                            
-										},																				
-									]									
-								},
-								{
-									text:{
-										name: "SSC",
-										title: "Staff Selection Commission"								
-									},
-									children: [
-										{
-											text: {
-												name: "Clerks",
-												title: ""								
-											}                            
-										},																				
-									]									
-								}
-							]                            
-                        
-                },
-                {                                        
-                    
+				name: "Jobs",
+				title: ""								
+			},
+			children: [
+				{
 					text: {
-						name: "Further Studies",
-						title: ""								
+						name: "NAVY",
+						title: "Indian Navy"								
 					},
 					children: [
 						{
 							text: {
-								name: "Intermediate",
-								title: ""								
+								name: "DYA",
+								title: "Dock Yard Apprentices"								
 							}                            
 						},
 						{
 							text:{
-								name: "Diploma",
-								title: ""								
+								name: "Sailors",
+								title: "sailors",
 							}                            
 						},
 						{
 							text:{
-								name: "ITI",
-								title: ""								
+								name: "AA",
+								title: "Artificer Apprentices",
+							}										
+						}
+					]									
+				},
+				{
+					text:{
+						name: "ARMY",
+						title: "Indian Army"								
+					},
+					children: [
+						{
+							text: {
+								name: "IASC",
+								title: "Indian Army Soldier Clerks Examination"								
+							}                            
+						},
+						{
+							text:{
+								name: "N.E.R.",
+								title: "Indian Army Soldier General Duty"								
+							}                            
+						},
+						{
+							text:{
+								name: "M.E.R.",
+								title: "Indian Army Soldier Technical"								
+							}                            
+						},
+						{
+							text:{
+								name: "M.E.R.",
+								title: "Indian Army Soldier Nursing Assistants"								
 							}                            
 						}
-					]		                        
-                }                
-            ]
+						
+					]									
+				},
+				{
+					text:{
+						name: "Police Force",
+						title: "Indian Police"								
+					},
+					children: [
+						{
+							text: {
+								name: "CRPF",
+								title: "Central Reserve Police Force"								
+							}                            
+						},																				
+					]									
+				},
+				{
+					text:{
+						name: "SSC",
+						title: "Staff Selection Commission"								
+					},
+					children: [
+						{
+							text: {
+								name: "Clerks",
+								title: ""								
+							}                            
+						},																				
+					]									
+				}
+			]                            
+                        
         },
+		"further studies":{                                        			
+			text: {
+				name: "Further Studies",
+				title: ""								
+			},
+			children: [
+				{
+					text: {
+						name: "Intermediate",
+						title: ""								
+					}                            
+				},
+				{
+					text:{
+						name: "Diploma",
+						title: ""								
+					}                            
+				},
+				{
+					text:{
+						name: "ITI",
+						title: ""								
+					}                            
+				}
+			]		                        
+		}
+	},	
 	"intermediate":{
 		"Engineering":{
 			"Description":"This is a professional course. Engineering means to find economical solution for technological problems and it has a vital role in the prevailing milieu. It is a vast field that offers infinite specialisation. This courses are 4 years duration",
@@ -176,5 +169,39 @@ module.exports = {
 	"degree":{
 	},
 	"pg":{
-	}
+	},
+	html:"<html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><meta name='viewport' content='width=device-width'><title> Collapsable example </title><link rel='stylesheet' href='../../Treant.css'><link rel='stylesheet' href='collapsable/collapsable.css'><link rel='stylesheet' href='vendor/perfect-scrollbar/perfect-scrollbar.css'></head><body><div class='chart' id='collapsable-example'></div><script src='../../vendor/raphael.js'></script><script src='../../Treant.js'></script><script src='../../vendor/jquery.min.js'></script><script src='../../vendor/jquery.easing.js'></script><script>configJson;tree = new Treant(careerConfig);</script></body></html>",
+	webview:{
+      "speech": "",
+      "messages": [
+        {
+          "type": 4,
+          "platform": "facebook",
+          "payload": {
+            "facebook": {
+              "attachment": {
+                "type": "template",
+                "payload": {
+                  "template_type": "button",
+                  "text": "Click for Information",
+                  "buttons": [
+                    {
+                      "type": "web_url",
+                      "url": "https://limitless-lake-62312.herokuapp.com/index.html",
+                      "title": "info",
+                      "webview_height_ratio": "tall",
+                      "messenger_extensions": "true"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    }
 }
