@@ -32,7 +32,7 @@ var processRequest = function(contextParams){
 		var html = careerConfig.html;		
 		constructJson(careerConfig[contextParams.qualification][contextParams.infoType])
 		.then(function(resp){				
-			html = html.replace('configJson', JSON.stringify(resp));
+			html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));
 			console.log(html);
 			fs.writeFile("public/index.html",html, function(err){
 				if(err){
