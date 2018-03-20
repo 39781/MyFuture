@@ -57,6 +57,7 @@ router.post('/botHandler',function(req, res){
         }
       ]
     }
+	console.log(JSON.stringify(webview));
 	res.status(200);
 	res.json(webview).end();	
 });
