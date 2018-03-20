@@ -170,38 +170,5 @@ module.exports = {
 	},
 	"pg":{
 	},
-	html:"<html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><meta name='viewport' content='width=device-width'><title> Collapsable example </title><link rel='stylesheet' href='../../Treant.css'><link rel='stylesheet' href='collapsable/collapsable.css'><link rel='stylesheet' href='vendor/perfect-scrollbar/perfect-scrollbar.css'></head><body><div class='chart' id='collapsable-example'></div><script src='../../vendor/raphael.js'></script><script src='../../Treant.js'></script><script src='../../vendor/jquery.min.js'></script><script src='../../vendor/jquery.easing.js'></script><script>configJson;tree = new Treant(careerConfig);</script></body></html>",
-	webview:{
-      "speech": "",
-      "messages": [
-        {
-          "type": 4,
-          "platform": "facebook",
-          "payload": {
-            "facebook": {
-              "attachment": {
-                "type": "template",
-                "payload": {
-                  "template_type": "button",
-                  "text": "Click for Information",
-                  "buttons": [
-                    {
-                      "type": "web_url",
-                      "url": "https://limitless-lake-62312.herokuapp.com/index.html",
-                      "title": "info",
-                      "webview_height_ratio": "tall",
-                      "messenger_extensions": "true"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        },
-        {
-          "type": 0,
-          "speech": ""
-        }
-      ]
-    }
+	html:"<html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><meta name='viewport' content='width=device-width'><title> Collapsable example </title><link rel='stylesheet' href='../../Treant.css'><link rel='stylesheet' href='collapsable/collapsable.css'><link rel='stylesheet' href='vendor/perfect-scrollbar/perfect-scrollbar.css'></head><body><div class='chart' id='collapsable-example'></div><script src='../../vendor/raphael.js'></script><script src='../../Treant.js'></script><script src='../../vendor/jquery.min.js'></script><script src='../../vendor/jquery.easing.js'></script><script>configJson;tree = new Treant(careerConfig);</script></body></html>",	
 }

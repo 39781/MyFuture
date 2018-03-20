@@ -24,33 +24,65 @@ router.post('/botHandler',function(req, res){
 			infoType:req.body.result.parameters.infotype.toLowerCase()
 		}
 	}
-	
+	var webview = {
+      "speech": "",
+      "messages": [
+        {
+          "type": 4,
+          "platform": "facebook",
+          "payload": {
+            "facebook": {
+              "attachment": {
+                "type": "template",
+                "payload": {
+                  "template_type": "button",
+                  "text": "Click for Information",
+                  "buttons": [
+                    {
+                      "type": "web_url",
+                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
+                      "title": "info",
+                      "webview_height_ratio": "tall",
+                      "messenger_extensions": "true"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    }
+	res.status(200);
+	res.json(webview).end();	
+});
+
+router.get('/getInfo/:qualification/:infoType',function(req, res){	
+	var	contextParams ={
+		qualification:req.params.qualification,
+		infoType:req.params.infoType
+	}	
 	processRequest(contextParams)
 	.then((resp)=>{	
-		console.log(careerConfig.webview);
-		res.json(careerConfig.webview).end();	
+		console.log(resp);	
+		res.end(resp);	
 	})
 	.catch((err)=>{
 		res.json(err).end();
-	});		
+	});	
 });
-
-
 var processRequest = function(contextParams){
 	return new Promise(function(resolve, reject){
 		var html = careerConfig.html;		
+		console.log(contextParams);
 		constructJson(careerConfig[contextParams.qualification][contextParams.infoType])
 		.then(function(resp){				
-			html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));
-			console.log(html);
-			fs.writeFile("public/index.html",html, function(err){
-				if(err){
-					console.log(err);
-					reject(false);
-				}else{
-					resolve(true);
-				}
-			})			
+			html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));			
+			resolve(html);		
 		})
 		.catch((err)=>{
 			reject(err);
