@@ -61,7 +61,7 @@ var constructJson = function(infoObj){
 						nodeAnimation: 'easeOutBounce',
 						nodeSpeed: 700,
 						connectorsAnimation: 'bounce',
-						connectorsSpeed: 7003
+						connectorsSpeed: 700
 					}
 				},
 				nodeStructure: {
