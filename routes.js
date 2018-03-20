@@ -37,15 +37,18 @@ router.post('/botHandler',function(req, res){
                 "payload": {
                   "template_type": "generic",
                   "text": "Click for Information",
-                  "buttons": [
-                    {
+				  "elements": [{
+					"title":"Click below button to see details",
+					"image_url": "",
+					"subtitle": "Ur Career",					
+					"buttons": [{
                       "type": "web_url",
                       "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
                       "title": "info",
                       "webview_height_ratio": "tall",
                       "messenger_extensions": "true"
-                    }
-                  ]
+                    }]
+				  }]                  
                 }
               }
             }
