@@ -39,7 +39,7 @@ router.post('/botHandler',function(req, res){
                   "buttons": [{
                       "type": "web_url",
 					  //"url": "https://limitless-lake-62312.herokuapp.com/index.html",
-                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType/req.body.originalRequest.data.sender.id,
+                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType+"/"+req.body.originalRequest.data.sender.id,
                       "title": "info",
                       "webview_height_ratio": "tall",
                       "messenger_extensions": "true"
