@@ -41,6 +41,10 @@ router.post('/botHandler',function(req, res){
 					"title":"Click below button to see details",
 					"image_url": "",
 					"subtitle": "Ur Career",					
+					"default_action":{
+					  "type":"web_url",
+					  "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType
+					}
 					"buttons": [{
                       "type": "web_url",
                       "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
