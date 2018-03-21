@@ -78,15 +78,21 @@ var processRequest = function(contextParams){
 	return new Promise(function(resolve, reject){
 		var html = careerConfig.html;		
 		console.log(contextParams);
-		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);			
-		constructJson(careerConfig[contextParams.qualification][contextParams.infoType])
-		.then(function(resp){				
-			html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));			
-			resolve(html);		
-		})
-		.catch((err)=>{
-			reject(err);
-		})		
+		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);
+		if(typeof(careerConfig[contextParams.qualification])=='undefined'){
+			html = "<html><body>Sorry ! for "+contextParams.qualification+" qualification data not available right now</body></html>";
+		}else if(typeof(careerConfig[contextParams.qualification][contextParams.infoType])=='undefined'){
+			html = "<html><body>Sorry ! for "+contextParams.qualification+" qualification "+contextParams.infoType+"data not available right now</body></html>";
+		}else{			
+			constructJson(careerConfig[contextParams.qualification][contextParams.infoType])
+			.then(function(resp){				
+				html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));			
+				resolve(html);		
+			})
+			.catch((err)=>{
+				reject(err);
+			})
+		}		
 	})
 }
 var constructJson = function(infoObj){
