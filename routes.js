@@ -26,8 +26,7 @@ router.post('/botHandler',function(req, res){
 	}
 	var webview = {
       "speech": "",
-      "messages": [
-        {
+      "messages": [{
           "type": 4,
           "platform": "facebook",
           "payload": {
@@ -35,25 +34,15 @@ router.post('/botHandler',function(req, res){
               "attachment": {
                 "type": "template",
                 "payload": {
-                  "template_type": "generic",
-                  "text": "Click for Information",
-				  "elements": [{
-					"title":"Click below button to see details",
-					"image_url": "",
-					"subtitle": "Ur Career",					
-					"default_action":{
-					  "type":"web_url",
-					  "url": "https://limitless-lake-62312.herokuapp.com/index.html"
-					},
-					"buttons": [{
+                  "template_type": "button",
+                  "text": "Click below button to view details",
+                  "buttons": [{
                       "type": "web_url",
-					  "url": "https://limitless-lake-62312.herokuapp.com/index.html",
-                      //"url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
+					  //"url": "https://limitless-lake-62312.herokuapp.com/index.html",
+                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
                       "title": "info",
-                      "webview_height_ratio": "tall",
-                      "messenger_extensions": "true"
+                      "webview_height_ratio": "tall"                      
                     }]
-				  }]                  
                 }
               }
             }
@@ -65,6 +54,7 @@ router.post('/botHandler',function(req, res){
         }
       ]
     }
+		
 	console.log(JSON.stringify(webview));
 	res.status(200);
 	res.json(webview).end();	
