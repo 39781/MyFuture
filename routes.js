@@ -43,11 +43,12 @@ router.post('/botHandler',function(req, res){
 					"subtitle": "Ur Career",					
 					"default_action":{
 					  "type":"web_url",
-					  "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType
+					  "url": "https://limitless-lake-62312.herokuapp.com/index.html"
 					}
 					"buttons": [{
                       "type": "web_url",
-                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
+					  "url": "https://limitless-lake-62312.herokuapp.com/index.html",
+                      //"url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
                       "title": "info",
                       "webview_height_ratio": "tall",
                       "messenger_extensions": "true"
