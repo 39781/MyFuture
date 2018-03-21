@@ -41,7 +41,8 @@ router.post('/botHandler',function(req, res){
 					  //"url": "https://limitless-lake-62312.herokuapp.com/index.html",
                       "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
                       "title": "info",
-                      "webview_height_ratio": "tall"                      
+                      "webview_height_ratio": "tall",
+                      "messenger_extensions": "true"
                     }]
                 }
               }
