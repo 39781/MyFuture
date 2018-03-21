@@ -39,7 +39,7 @@ router.post('/botHandler',function(req, res){
                   "buttons": [{
                       "type": "web_url",
 					  //"url": "https://limitless-lake-62312.herokuapp.com/index.html",
-                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType,
+                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType/req.body.originalRequest.source.data.sender.id,
                       "title": "info",
                       "webview_height_ratio": "tall",
                       "messenger_extensions": "true"
@@ -61,10 +61,11 @@ router.post('/botHandler',function(req, res){
 	res.json(webview).end();	
 });
 
-router.get('/getInfo/:qualification/:infoType',function(req, res){	
+router.get('/getInfo/:qualification/:infoType/:recipientId',function(req, res){	
 	var	contextParams ={
 		qualification:req.params.qualification,
-		infoType:req.params.infoType
+		infoType:req.params.infoType,
+		recipientId:req.params.recipientId
 	}	
 	processRequest(contextParams)
 	.then((resp)=>{	
@@ -79,6 +80,7 @@ var processRequest = function(contextParams){
 	return new Promise(function(resolve, reject){
 		var html = careerConfig.html;		
 		console.log(contextParams);
+		html = html.replace('recipientId',contextParams.recipientId);
 		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);
 		if(typeof(careerConfig[contextParams.qualification])=='undefined'){
 			html = "<html><body>Sorry ! for "+contextParams.qualification+" qualification data not available right now</body></html>";
