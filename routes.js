@@ -78,6 +78,7 @@ var processRequest = function(contextParams){
 	return new Promise(function(resolve, reject){
 		var html = careerConfig.html;		
 		console.log(contextParams);
+		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);			
 		constructJson(careerConfig[contextParams.qualification][contextParams.infoType])
 		.then(function(resp){				
 			html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));			
