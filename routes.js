@@ -34,7 +34,7 @@ router.post('/botHandler',function(req, res){
 		responseObj.messages[0].replies = ["SSC","Intermediate","Graduation","Post graduation"];
 	}else if(req.body.result.parameters.qualification != 'SSC'&& req.body.result.parameters.branch.length<=0){
 		inputs["sessionId"]["currentInput"]= "branch";
-		responseObj.messages[0].title = "Please select your title";
+		responseObj.messages[0].title = "Please select your branch";
 		responseObj.messages[0].replies = careerConfig.input[req.body.result.parameters.qualification.toLowerCase()]
 	}else{
 		delete inputs["sessionId"];
