@@ -4,7 +4,12 @@ module.exports = {
 		"graduation":['MSCs','MCs','BA','BBA','BCA','BCOM','BTech'],
 		"postGraduation":['MSc','MCom','MBA','MCA','MTech'],
 		"inputResJson":{			
-			"speech": "",		
+			"speech": "",
+			"contextOut": [{
+				 "name":"", 
+				 "lifespan":2, 
+				 "parameters":{}
+			}],			
 			"messages": [{
 				  "type": 2,
 				  "platform": "facebook",
