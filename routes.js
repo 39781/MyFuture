@@ -40,7 +40,7 @@ router.post('/botHandler',function(req, res){
                       "type": "web_url",
 					  //"url": "https://limitless-lake-62312.herokuapp.com/index.html",
                       "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType+"/"+req.body.originalRequest.data.sender.id,
-                      "title": "info",
+                      "title": "view",
                       "webview_height_ratio": "tall",
                       "messenger_extensions": "true"
                     }]
@@ -120,6 +120,7 @@ var processRequest = function(contextParams){
 		console.log(contextParams);
 		html = html.replace('recipientId',contextParams.recipientId);
 		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);
+		html = html.replace('contentType',contextParams.infoType);
 		if(typeof(careerConfig[contextParams.qualification])=='undefined'){
 			html = "<html><body>Sorry ! for "+contextParams.qualification+" qualification data not available right now</body></html>";
 			resolve(html);
