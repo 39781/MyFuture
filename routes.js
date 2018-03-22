@@ -13,53 +13,77 @@ router.post('/botHandler',function(req, res){
 	//console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
 	//console.log('Dialogflow Request body: ' + JSON.stringify(req.body));	
 	console.log(req.body.result.parameters);
-	res.end();
-	/*let contextParams;
-	if(req.body.result.contexts.length>0){
-		contextParams ={
-			qualification:req.body.result.contexts[0].parameters.qualification.toLowerCase(),
-			infoType:req.body.result.contexts[0].parameters.infotype.toLowerCase()
-		}	
-	}else{
-		contextParams ={
-			qualification:req.body.result.parameters.qualification.toLowerCase(),
-			infoType:req.body.result.parameters.infotype.toLowerCase()
-		}
+	var sessionId = (req.body.sessionId)?req.body.sessionId:'';
+	if(!inputs["sessionId"]){
+		inputs["sessionId"]={"currentInput":null};
 	}
-	var webview = {
-      "speech": "",
-      "messages": [{
-          "type": 4,
-          "platform": "facebook",
-          "payload": {
-            "facebook": {
-              "attachment": {
-                "type": "template",
-                "payload": {
-                  "template_type": "button",
-                  "text": "Click below button to view details",
-                  "buttons": [{
-                      "type": "web_url",
-					  //"url": "https://limitless-lake-62312.herokuapp.com/index.html",
-                      "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType+"/"+req.body.originalRequest.data.sender.id,
-                      "title": "view",
-                      "webview_height_ratio": "tall",
-                      "messenger_extensions": "true"
-                    }]
-                }
-              }
-            }
-          }
-        },
-        {
-          "type": 0,
-          "speech": ""
-        }
-      ]
-    }
-	console.log(JSON.stringify(webview));
+	if(inputs["sessionId"]["currentInput"]){
+		req.body.result.parameters[inputs["sessionId"]["currentInput"]]=req.body.result.resolvedQuery;
+	}	
+	var responseObj = careerConfig.input.inputResJson;
+	responseObj.contextOut[0].name = "542f6844-1eaa-4b89-8f3a-1e6b5ad5e3d0_id_dialog_context";
+	responseObj.contextOut[0].parameters = req.body.result.parameters;
+	
+	if(req.body.result.parameters.infotype.length<=0){
+		inputs["sessionId"]["currentInput"] = "infotype";
+		responseObj.messages[0].title = "Please select which information you need?";
+		responseObj.messages[0].replies = ["Jobs","Further Studies"];
+	}else if(req.body.result.parameters.qualificaton.length<=0){
+		inputs["sessionId"]["currentInput"] = "qualification";
+		responseObj.messages[0].title = "Please select your qualification";
+		responseObj.messages[0].replies = ["SSC","Intermediate","Graduation","Post graduation"];
+	}else if(req.body.result.parameters.qualification != 'SSC'&& req.body.result.parameters.branch.length<=0){
+		inputs["sessionId"]["currentInput"]= "branch";
+		responseObj.messages[0].title = "Please select your title";
+		responseObj.messages[0].replies = careerConfig.input[req.body.result.parameters.qualification]
+	}else{
+		let contextParams;
+		if(req.body.result.contexts.length>0){
+			contextParams ={
+				qualification:req.body.result.contexts[0].parameters.qualification.toLowerCase(),
+				infoType:req.body.result.contexts[0].parameters.infotype.toLowerCase()
+			}	
+		}else{
+			contextParams ={
+				qualification:req.body.result.parameters.qualification.toLowerCase(),
+				infoType:req.body.result.parameters.infotype.toLowerCase()
+			}
+		}
+		 responseObj = {
+		  "speech": "",
+		  "messages": [{
+			  "type": 4,
+			  "platform": "facebook",
+			  "payload": {
+				"facebook": {
+				  "attachment": {
+					"type": "template",
+					"payload": {
+					  "template_type": "button",
+					  "text": "Click below button to view details",
+					  "buttons": [{
+						  "type": "web_url",
+						  //"url": "https://limitless-lake-62312.herokuapp.com/index.html",
+						  "url": "https://limitless-lake-62312.herokuapp.com/getInfo/"+contextParams.qualification+"/"+contextParams.infoType+"/"+req.body.originalRequest.data.sender.id,
+						  "title": "view",
+						  "webview_height_ratio": "tall",
+						  "messenger_extensions": "true"
+						}]
+					}
+				  }
+				}
+			  }
+			},
+			{
+			  "type": 0,
+			  "speech": ""
+			}
+		  ]
+		}
+		console.log(JSON.stringify(webview));
+	}
 	res.status(200);
-	res.json(webview).end();*/	
+	res.json(responseObj).end();
 });
 router.get('/shareMessageToBot/:recipientId',function(req, res){
 	var queryParams = {};	
