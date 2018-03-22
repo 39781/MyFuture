@@ -1,4 +1,23 @@
-module.exports = {	
+module.exports = {
+	"input":{
+		"intermediate":['mpc','bipc','ece','hec'],
+		"graduation":['MSCs','MCs','BA','BBA','BCA','BCOM','BTech'],
+		"postGraduation":['MSc','MCom','MBA','MCA','MTech'],
+		"inputResJson":{			
+			"speech": "",		
+			"messages": [{
+				  "type": 2,
+				  "platform": "facebook",
+				  "title": "Please select your ",
+				  "replies": []
+			},
+			{
+			  "type": 0,
+			  "speech": ""
+			}
+			]
+		}
+	},
 	"ssc":{
 		"jobs":{                    
 			collapsed: true,

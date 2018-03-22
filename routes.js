@@ -12,7 +12,8 @@ router.get('/',function(req, res){
 router.post('/botHandler',function(req, res){
 	//console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
 	console.log('Dialogflow Request body: ' + JSON.stringify(req.body));	
-	let contextParams;
+	res.end();
+	/*let contextParams;
 	if(req.body.result.contexts.length>0){
 		contextParams ={
 			qualification:req.body.result.contexts[0].parameters.qualification.toLowerCase(),
@@ -57,7 +58,7 @@ router.post('/botHandler',function(req, res){
     }
 	console.log(JSON.stringify(webview));
 	res.status(200);
-	res.json(webview).end();	
+	res.json(webview).end();*/	
 });
 router.get('/shareMessageToBot/:recipientId',function(req, res){
 	var queryParams = {};	
