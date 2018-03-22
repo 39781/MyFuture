@@ -155,8 +155,7 @@ var processRequest = function(contextParams){
 		var html = careerConfig.html;		
 		console.log(contextParams);
 		html = html.replace('recipientId',contextParams.recipientId);
-		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);
-		html = html.replace('contentType',contextParams.infoType);
+		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);		
 		if(typeof(careerConfig[contextParams.qualification])=='undefined'){
 			html = html.replace("htmlContent","Sorry ! for "+contextParams.qualification+" qualification data not available right now");
 			resolve(html);
@@ -167,6 +166,7 @@ var processRequest = function(contextParams){
 			constructJson(careerConfig[contextParams.qualification][contextParams.infoType])
 			.then(function(resp){
 				html = html.replace("htmlContent","<center>Click on contentType</center><div class='chart' id='collapsable-example'></div>");
+				html = html.replace('contentType',contextParams.infoType);
 				html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));			
 				resolve(html);		
 			})
