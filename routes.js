@@ -2,7 +2,7 @@ var express 		= require('express');
 var router			= express.Router();	 
 var careerConfig	= require("./config");	
 var fs 				= require("fs");	
-
+var request			= require('request');
 router.get('/',function(req, res){
 	console.log('req received');
 	res.send("req received");
@@ -55,12 +55,50 @@ router.post('/botHandler',function(req, res){
         }
       ]
     }
-		
 	console.log(JSON.stringify(webview));
 	res.status(200);
 	res.json(webview).end();	
 });
-
+router.get('/shareMessageBot/:recipientId',function(req, res){
+	var queryParams = {};	
+	var messageToSend = {
+		recipient: {
+			id: req.params.recipientId,
+		},
+		message:{
+			'text': 'please select which information you need?',
+			'quick_replies':[
+				{'content_type':'text','title':'Jobs','payload':'Jobs'},
+				{'content_type':'text','title':'Further studies','payload':'Further studies'}
+			]
+		}
+	};
+	const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;	
+	const query = Object.assign({access_token: PAGE_ACCESS_TOKEN}, queryParams);	
+	request({
+		uri: `https://graph.facebook.com/v2.6/me/messages`,
+		qs: query,
+		method: 'POST',
+		json: messageToSend,
+		}, (error, response, body) => {
+			if (!error && response.statusCode === 200) {
+				// Message has been successfully received by Facebook.
+				console.log(JSON.stringify(body));
+			} else {		
+				// Message has not been successfully received by Facebook.
+				console.error(
+					`Failed calling Messenger API endpoint`,
+					response.statusCode,
+					response.statusMessage,
+					body.error,
+					queryParams
+				);      
+			}
+		}
+	);
+	res.status(200);
+	res.end();
+});
 router.get('/getInfo/:qualification/:infoType/:recipientId',function(req, res){	
 	var	contextParams ={
 		qualification:req.params.qualification,
