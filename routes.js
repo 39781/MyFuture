@@ -28,7 +28,7 @@ router.post('/botHandler',function(req, res){
 		inputs["sessionId"]["currentInput"] = "infotype";
 		responseObj.messages[0].title = "Please select which information you need?";
 		responseObj.messages[0].replies = ["Jobs","Further Studies"];
-	}else if(req.body.result.parameters.qualificaton.length<=0){
+	}else if(req.body.result.parameters.qualification.length<=0){
 		inputs["sessionId"]["currentInput"] = "qualification";
 		responseObj.messages[0].title = "Please select your qualification";
 		responseObj.messages[0].replies = ["SSC","Intermediate","Graduation","Post graduation"];
