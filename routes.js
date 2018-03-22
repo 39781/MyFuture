@@ -59,7 +59,7 @@ router.post('/botHandler',function(req, res){
 	res.status(200);
 	res.json(webview).end();	
 });
-router.get('/shareMessageBot/:recipientId',function(req, res){
+router.get('/shareMessageToBot/:recipientId',function(req, res){
 	var queryParams = {};	
 	var messageToSend = {
 		recipient: {
