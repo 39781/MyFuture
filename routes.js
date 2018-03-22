@@ -158,14 +158,15 @@ var processRequest = function(contextParams){
 		html = html.replace('infoTitle',contextParams.qualification+" Related "+contextParams.infoType);
 		html = html.replace('contentType',contextParams.infoType);
 		if(typeof(careerConfig[contextParams.qualification])=='undefined'){
-			html = "<html><body>Sorry ! for "+contextParams.qualification+" qualification data not available right now</body></html>";
+			html = html.replace("htmlContent","Sorry ! for "+contextParams.qualification+" qualification data not available right now");
 			resolve(html);
 		}else if(typeof(careerConfig[contextParams.qualification][contextParams.infoType])=='undefined'){
-			html = "<html><body>Sorry ! for "+contextParams.qualification+" qualification "+contextParams.infoType+"data not available right now</body></html>";
+			html = html.replace("htmlContent","Sorry ! for "+contextParams.qualification+" qualification "+contextParams.infoType+"data not available right now");
 			resolve(html);
 		}else{			
 			constructJson(careerConfig[contextParams.qualification][contextParams.infoType])
-			.then(function(resp){				
+			.then(function(resp){
+				html = html.replace("htmlContent","<center>Click on contentType</center><div class='chart' id='collapsable-example'></div>");
 				html = html.replace('configJson', "var careerConfig="+JSON.stringify(resp));			
 				resolve(html);		
 			})
