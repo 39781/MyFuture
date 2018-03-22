@@ -37,6 +37,7 @@ router.post('/botHandler',function(req, res){
 		responseObj.messages[0].title = "Please select your title";
 		responseObj.messages[0].replies = careerConfig.input[req.body.result.parameters.qualification]
 	}else{
+		delete inputs["sessionId"];
 		let contextParams;
 		if(req.body.result.contexts.length>0){
 			contextParams ={
@@ -80,7 +81,7 @@ router.post('/botHandler',function(req, res){
 			}
 		  ]
 		}
-		console.log(JSON.stringify(webview));
+		console.log(JSON.stringify(responseObj));
 	}
 	res.status(200);
 	res.json(responseObj).end();
