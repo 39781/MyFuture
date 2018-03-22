@@ -52,6 +52,15 @@ router.post('/botHandler',function(req, res){
 		}
 		 responseObj = {
 		  "speech": "",
+		  "contextOut": [{
+				 "name":"542f6844-1eaa-4b89-8f3a-1e6b5ad5e3d0_id_dialog_context", 
+				 "lifespan":2, 
+				 "parameters":{
+					 "infotype":"",
+					 "qualification":"",
+					 "branch":""					 
+				 }
+			}],
 		  "messages": [{
 			  "type": 4,
 			  "platform": "facebook",
