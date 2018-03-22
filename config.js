@@ -1,8 +1,8 @@
 module.exports = {
 	"input":{
-		"Intermediate":['mpc','bipc','ece','hec'],
-		"Graduation":['MSCs','MCs','BA','BBA','BCA','BCOM','BTech'],
-		"Post graduation":['MSc','MCom','MBA','MCA','MTech'],
+		"intermediate":['mpc','bipc','ece','hec'],
+		"graduation":['MSCs','MCs','BA','BBA','BCA','BCOM','BTech'],
+		"post graduation":['MSc','MCom','MBA','MCA','MTech'],
 		"inputResJson":{			
 			"speech": "",
 			"contextOut": [{

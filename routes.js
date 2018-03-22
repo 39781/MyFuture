@@ -35,7 +35,7 @@ router.post('/botHandler',function(req, res){
 	}else if(req.body.result.parameters.qualification != 'SSC'&& req.body.result.parameters.branch.length<=0){
 		inputs["sessionId"]["currentInput"]= "branch";
 		responseObj.messages[0].title = "Please select your title";
-		responseObj.messages[0].replies = careerConfig.input[req.body.result.parameters.qualification]
+		responseObj.messages[0].replies = careerConfig.input[req.body.result.parameters.qualification.toLowerCase()]
 	}else{
 		delete inputs["sessionId"];
 		let contextParams;
