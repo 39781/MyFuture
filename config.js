@@ -1,7 +1,7 @@
 module.exports = {
 	"input":{
-		"intermediate":['mpc','bipc','ece','hec'],
-		"graduation":['MSCs','MCs','BA','BBA','BCA','BCOM','BTech'],
+		"intermediate":['MPC','BIPC','ECE','HEC'],
+		"graduation":['MSCS','MPCS','BA','BBA','BCA','BCOM','BTech'],
 		"post graduation":['MSc','MCom','MBA','MCA','MTech'],
 		"inputResJson":{			
 			"speech": "",
@@ -132,7 +132,8 @@ module.exports = {
 						name: "Intermediate",
 						title: "Duration Two Years"								
 					},
-					childrenDropLevel: 1,collapsed: true,
+					childrenDropLevel: 1,
+					collapsed: true,
 					children: [
 						{
 							text: {
@@ -169,7 +170,8 @@ module.exports = {
 								name: "Vocational Courses",
 								title: "Duration Two Years"								
 							},
-							childrenDropLevel: 1,collapsed: true,
+							childrenDropLevel: 1,
+							collapsed: true,
 							children: [
 								{
 									text: {
@@ -177,6 +179,7 @@ module.exports = {
 										title: "Agriculture Courses"								
 									},
 									childrenDropLevel: 1,
+									collapsed: true,
 									children: [
 										{
 											text: {
@@ -209,7 +212,8 @@ module.exports = {
 										name: "BCC",
 										title: "Business & Commerce Courses"								
 									},
-									childrenDropLevel: 2,collapsed: true,
+									childrenDropLevel: 2,
+									collapsed: true,
 									children: [
 										{
 											text: {
@@ -248,7 +252,8 @@ module.exports = {
 										name: "ETC",
 										title: "Engineering & Technology Courses"								
 									},
-									childrenDropLevel: 3,collapsed: true,
+									childrenDropLevel: 3,
+									collapsed: true,
 									children: [
 										{
 											text: {
@@ -305,7 +310,8 @@ module.exports = {
 										name: "HS",
 										title: "Home Sciences Courses"								
 									},
-									childrenDropLevel: 4,collapsed: true,
+									childrenDropLevel: 4,
+									collapsed: true,
 									children: [
 										{
 											text: {
@@ -338,7 +344,8 @@ module.exports = {
 										name: "PC",
 										title: "Paramedical Courses"								
 									},
-									childrenDropLevel: 5,collapsed: true,
+									childrenDropLevel: 5,
+									collapsed: true,
 									children: [
 										{
 											text: {
@@ -371,7 +378,8 @@ module.exports = {
 										name: "HO",
 										title: "Humanities & Other Courses"								
 									},
-									childrenDropLevel: 6,collapsed: true,
+									childrenDropLevel: 6,
+									collapsed: true,
 									children: [
 										{
 											text: {
@@ -392,7 +400,8 @@ module.exports = {
 										name: "BCT",
 										title: "Bridge Courses Theory"								
 									},
-									childrenDropLevel: 7,collapsed: true,
+									childrenDropLevel: 7,
+									collapsed: true,
 									children: [
 										{
 											text: {
@@ -419,7 +428,8 @@ module.exports = {
 										name: "BCP",
 										title: "Bridge Courses Practical"								
 									},
-									childrenDropLevel: 8,collapsed: true,
+									childrenDropLevel: 8,
+									collapsed: true,
 									children: [
 										{
 											text: {

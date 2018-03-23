@@ -29,9 +29,14 @@ router.post('/botHandler',function(req, res){
 		responseObj.messages[0].title = "Please select which information you need?";
 		responseObj.messages[0].replies = ["Jobs","Further Studies","Exit"];
 	}else if(req.body.result.parameters.qualification.length<=0){
-		inputs["sessionId"]["currentInput"] = "qualification";
-		responseObj.messages[0].title = "Please select your qualification";
-		responseObj.messages[0].replies = ["SSC","Intermediate","Graduation","Post graduation"];
+		if(req.body.result.parameters.branch.length>0){
+			req.body.result.parameters["qualification"] = findQualification(req.body.result.parameters.branch);
+			delete responseObj.messages;
+		}else{
+			inputs["sessionId"]["currentInput"] = "qualification";
+			responseObj.messages[0].title = "Please select your qualification";
+			responseObj.messages[0].replies = ["SSC","Intermediate","Graduation","Post graduation"];
+		}
 	}else if(req.body.result.parameters.qualification != 'SSC'&& req.body.result.parameters.branch.length<=0){
 		inputs["sessionId"]["currentInput"]= "branch";
 		responseObj.messages[0].title = "Please select your branch";
@@ -213,6 +218,18 @@ var constructJson = function(infoObj){
 		resolve(careerConfig);	
 	})
 	
+}
+
+var findQualification = function(branch){
+	if(careerConfig.input['intermediate'].indexOf()>=0){
+		return "intermediate";
+	}
+	if(careerConfig.input['graduation'].indexOf()>=0){
+		return "graduation";
+	}
+	if(careerConfig.input['post graduation'].indexOf()>=0){
+		return "post graduation";
+	}
 }
 module.exports = router;
 
