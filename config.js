@@ -132,6 +132,7 @@ module.exports = {
 						name: "Intermediate",
 						title: "Duration Two Years"								
 					},
+					childrenDropLevel: 1,
 					children: [
 						{
 							text: {
@@ -168,12 +169,14 @@ module.exports = {
 								name: "Vocational Courses",
 								title: "Duration Two Years"								
 							},
+							childrenDropLevel: 1,
 							children: [
 								{
 									text: {
 										name: "AC",
 										title: "Agriculture Courses"								
 									},
+									childrenDropLevel: 1,
 									children: [
 										{
 											text: {
@@ -206,6 +209,7 @@ module.exports = {
 										name: "BCC",
 										title: "Business & Commerce Courses"								
 									},
+									childrenDropLevel: 2,
 									children: [
 										{
 											text: {
@@ -244,6 +248,7 @@ module.exports = {
 										name: "ETC",
 										title: "Engineering & Technology Courses"								
 									},
+									childrenDropLevel: 3,
 									children: [
 										{
 											text: {
@@ -300,6 +305,7 @@ module.exports = {
 										name: "HS",
 										title: "Home Sciences Courses"								
 									},
+									childrenDropLevel: 4,
 									children: [
 										{
 											text: {
@@ -332,6 +338,7 @@ module.exports = {
 										name: "PC",
 										title: "Paramedical Courses"								
 									},
+									childrenDropLevel: 5,
 									children: [
 										{
 											text: {
@@ -364,6 +371,7 @@ module.exports = {
 										name: "HO",
 										title: "Humanities & Other Courses"								
 									},
+									childrenDropLevel: 6,
 									children: [
 										{
 											text: {
@@ -384,6 +392,7 @@ module.exports = {
 										name: "BCT",
 										title: "Bridge Courses Theory"								
 									},
+									childrenDropLevel: 7,
 									children: [
 										{
 											text: {
@@ -410,6 +419,7 @@ module.exports = {
 										name: "BCP",
 										title: "Bridge Courses Practical"								
 									},
+									childrenDropLevel: 8,
 									children: [
 										{
 											text: {
