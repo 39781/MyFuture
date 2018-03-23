@@ -182,9 +182,17 @@ var constructJson = function(infoObj){
 		var careerConfig = {
 				chart: {
 					container: '#collapsable-example',
-					animateOnInit: true,
+					rootOrientation:  'WEST', // NORTH || EAST || WEST || SOUTH
+					// levelSeparation: 30,
+					siblingSeparation:   20,
+					subTeeSeparation:    60,
+					scrollbar: "fancy",
+					//animateOnInit: true,
+					connectors: {
+						type: 'step'
+					},
 					node: {
-						collapsable: true
+						 HTMLclass: 'nodeExample1'
 					},
 					animation: {
 						nodeAnimation: 'easeOutBounce',
