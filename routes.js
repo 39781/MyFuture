@@ -105,7 +105,8 @@ router.get('/shareMessageToBot/:recipientId',function(req, res){
 			'text': 'please select which information you need?',
 			'quick_replies':[
 				{'content_type':'text','title':'Jobs','payload':'Jobs'},
-				{'content_type':'text','title':'Further studies','payload':'Further studies'}
+				{'content_type':'text','title':'Further studies','payload':'Further studies'},
+				{'content_type':'text','title':'Exit','payload':'Exit'}
 			]
 		}
 	};
