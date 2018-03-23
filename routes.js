@@ -94,9 +94,9 @@ router.post('/botHandler',function(req, res){
 			  "speech": ""
 			}
 		  ]
-		}
-		console.log(JSON.stringify(responseObj));
+		}		
 	}
+	console.log(JSON.stringify(responseObj));
 	res.status(200);
 	res.json(responseObj).end();
 });
