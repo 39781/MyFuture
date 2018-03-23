@@ -130,8 +130,304 @@ module.exports = {
 				{
 					text: {
 						name: "Intermediate",
-						title: ""								
-					}                            
+						title: "Duration Two Years"								
+					},
+					children: [
+						{
+							text: {
+								name: "MPC",
+								title: "Maths, Physics, Chemistry - Science stream"								
+							}                            
+						},
+						{
+							text:{
+								name: "Bi.PC",
+								title: "Biology, Physics, Chemistry - Science stream "								
+							}                            
+						},
+						{
+							text:{
+								name: "M.Bi.PC",
+								title: "Maths, Biology, Physics, Chemistry - Science stream "								
+							}                            
+						},
+						{
+							text:{
+								name: "HEC",
+								title: "History, Economics, Civics - Arts stream"								
+							}                            
+						},
+						{
+							text:{
+								name: "CEC",
+								title: "Commerce, Economics, Civics - Arts stream"								
+							}                            
+						},
+						{
+							text:{
+								name: "Vocational Courses",
+								title: "Duration Two Years"								
+							},
+							children: [
+								{
+									text: {
+										name: "AC",
+										title: "Agriculture Courses"								
+									},
+									children: [
+										{
+											text: {
+												name: "CPM",
+												title: "Crop production & Management"								
+											}											
+										},
+										{
+											text: {
+												name: "Dairying",
+												title: ""								
+											}											
+										},
+										{
+											text: {
+												name: "Fisheries",
+												title: ""								
+											}											
+										},
+										{
+											text: {
+												name: "Sericulture",
+												title: ""								
+											}											
+										}
+									]
+								},
+								{
+									text: {
+										name: "BCC",
+										title: "Business & Commerce Courses"								
+									},
+									children: [
+										{
+											text: {
+												name: "AT",
+												title: "Accounting & Taxation"								
+											}											
+										},
+										{
+											text: {
+												name: "MS",
+												title: "Marketing & Salesmanship"								
+											}											
+										},
+										{
+											text: {
+												name: "OAS",
+												title: "Office Assitant Ship"								
+											}											
+										},
+										{
+											text: {
+												name: "BFS",
+												title: "Banking & Financial Services"								
+											}											
+										},
+										{
+											text: {
+												name: "IM",
+												title: "Insuarance & Marketing"								
+											}											
+										}
+									]
+								},
+								{
+									text: {
+										name: "ETC",
+										title: "Engineering & Technology Courses"								
+									},
+									children: [
+										{
+											text: {
+												name: "AET",
+												title: "Automobile Engineering Technician"								
+											}											
+										},
+										{
+											text: {
+												name: "CT",
+												title: "Construction Technology"								
+											}											
+										},
+										{
+											text: {
+												name: "CSE",
+												title: "Computer Science & Engineering"								
+											}											
+										},
+										{
+											text: {
+												name: "EET",
+												title: "Electronics Engineering Technician"								
+											}											
+										},
+										{
+											text: {
+												name: "EWEA",
+												title: "Electrical Wiring & Servicing of Electrical Appliances"								
+											}											
+										},
+										{
+											text: {
+												name: "RE",
+												title: "Rural Engineering Technician"								
+											}											
+										},
+										{
+											text: {
+												name: "WSSE",
+												title: "Water Supply & Sanitary Engineering"								
+											}											
+										},
+										{
+											text: {
+												name: "DTP",
+												title: "DTP & Printing Technology "								
+											}											
+										}
+									]
+								},
+								{
+									text: {
+										name: "HS",
+										title: "Home Sciences Courses"								
+									},
+									children: [
+										{
+											text: {
+												name: "CGD",
+												title: "Commercial Garment Designing & Making"								
+											}											
+										},
+										{
+											text: {
+												name: "FG",
+												title: "Fashion Garment Making"								
+											}											
+										},
+										{
+											text: {
+												name: "HO",
+												title: "Hotel operations"								
+											}											
+										},
+										{
+											text: {
+												name: "STT",
+												title: "Pre – School Teacher Training "								
+											}											
+										}										
+									]
+								},
+								{
+									text: {
+										name: "PC",
+										title: "Paramedical Courses"								
+									},
+									children: [
+										{
+											text: {
+												name: "MLT",
+												title: "Medical Lab Technician"								
+											}											
+										},
+										{
+											text: {
+												name: "MHW",
+												title: "Multipurpose Health Worker "								
+											}											
+										},
+										{
+											text: {
+												name: "OT",
+												title: "Ophthalmic Technician"								
+											}											
+										},
+										{
+											text: {
+												name: "PT",
+												title: "Physiotherapy"								
+											}											
+										}										
+									]
+								},
+								{
+									text: {
+										name: "HO",
+										title: "Humanities & Other Courses"								
+									},
+									children: [
+										{
+											text: {
+												name: "CGA",
+												title: "Computer Graphics & Animation"								
+											}											
+										},
+										{
+											text: {
+												name: "TTT",
+												title: "Tourism and Travel Technique"								
+											}											
+										}
+									]
+								},
+								{
+									text: {
+										name: "BCT",
+										title: "Bridge Courses Theory"								
+									},
+									children: [
+										{
+											text: {
+												name: "M",
+												title: "Mathematics "								
+											}											
+										},
+										{
+											text: {
+												name: "PS",
+												title: "Physical Sciences (Physics & Chemistry) "								
+											}											
+										},
+										{
+											text: {
+												name: "BS",
+												title: "Biological Sciences (Botany & Zoology)"								
+											}											
+										}
+									]
+								},
+								{
+									text: {
+										name: "BCP",
+										title: "Bridge Courses Practical"								
+									},
+									children: [
+										{
+											text: {
+												name: "PS",
+												title: "Physical Sciences (Physics & Chemistry) "								
+											}											
+										},
+										{
+											text: {
+												name: "BS",
+												title: "Biological Sciences (Botany & Zoology)"								
+											}											
+										}
+									]
+								}								
+							]		
+						}
+					]					
 				},
 				{
 					text:{
