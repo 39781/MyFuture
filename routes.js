@@ -29,7 +29,7 @@ router.post('/botHandler',function(req, res){
 				 "parameters":req.body.result.parameters
 			});
 	
-
+	console.log(responseObj);
 	if(req.body.result.parameters.infotype.length<=0){
 		inputs["sessionId"]["currentInput"] = "infotype";
 		responseObj.messages[0].title = "Please select which information you need?";
