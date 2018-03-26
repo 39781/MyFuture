@@ -22,13 +22,8 @@ router.post('/botHandler',function(req, res){
 	}	
 	var responseObj = careerConfig.input.inputResJson;
 	responseObj.contextOut[0].name = "542f6844-1eaa-4b89-8f3a-1e6b5ad5e3d0_id_dialog_context";
-	responseObj.contextOut[0].parameters = req.body.result.parameters;
-	responseObj.contextOut.push({
-				 "name":"informationneeded_dialog_context", 
-				 "lifespan":2, 
-				 "parameters":req.body.result.parameters
-			});
-	
+	responseObj.contextOut[0].parameters = req.body.result.parameters;	
+
 	console.log(responseObj);
 	if(req.body.result.parameters.infotype.length<=0){
 		inputs["sessionId"]["currentInput"] = "infotype";
