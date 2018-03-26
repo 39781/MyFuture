@@ -223,13 +223,14 @@ var constructJson = function(infoObj){
 }
 
 var findQualification = function(branch){
-	if(careerConfig.input['intermediate'].indexOf()>=0){
+	if(careerConfig.input['intermediate'].indexOf(branch)>=0){
+		console.log('intermediate');
 		return "intermediate";
 	}
-	if(careerConfig.input['graduation'].indexOf()>=0){
+	if(careerConfig.input['graduation'].indexOf(branch)>=0){
 		return "graduation";
 	}
-	if(careerConfig.input['post graduation'].indexOf()>=0){
+	if(careerConfig.input['post graduation'].indexOf(branch)>=0){
 		return "post graduation";
 	}
 }
