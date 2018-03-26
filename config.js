@@ -484,6 +484,7 @@ module.exports = {
 						title: "Industrial Training Institute"								
 					},
 					collapsed: true,
+					pseudo:true,
 					children: [
 						{
 							text: {
