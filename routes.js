@@ -198,7 +198,7 @@ var constructJson = function(infoObj){
 					scrollbar: "fancy",
 					//animateOnInit: true,
 					connectors: {
-						type: 'step'
+						type: 'bCurve'
 					},
 					node: {
 						 HTMLclass: 'nodeExample1'
