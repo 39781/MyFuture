@@ -13,12 +13,12 @@ router.post('/botHandler',function(req, res){
 	//console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
 	console.log('Dialogflow Request body: ' + JSON.stringify(req.body));	
 	console.log(req.body.result.parameters);
-	var sessionId = (req.body.sessionId)?req.body.sessionId:'';
-	if(!inputs["sessionId"]){
-		inputs["sessionId"]={"currentInput":null};
+	var sessionId = (req.body.sessionId)?req.body.sessionId:'';	
+	if(!inputs[sessionId]){
+		inputs[sessionId]={"currentInput":null};
 	}
-	if(inputs["sessionId"]["currentInput"]){
-		req.body.result.parameters[inputs["sessionId"]["currentInput"]]=req.body.result.resolvedQuery;
+	if(inputs[sessionId]["currentInput"]){
+		req.body.result.parameters[inputs[sessionId]["currentInput"]]=req.body.result.resolvedQuery;
 	}	
 	var responseObj = JSON.parse(JSON.stringify(careerConfig.input.inputResJson));
 	responseObj.contextOut[0].name = "542f6844-1eaa-4b89-8f3a-1e6b5ad5e3d0_id_dialog_context";
@@ -26,7 +26,7 @@ router.post('/botHandler',function(req, res){
 
 	console.log(responseObj);
 	if(req.body.result.parameters.infotype.length<=0){
-		inputs["sessionId"]["currentInput"] = "infotype";
+		inputs[sessionId]["currentInput"] = "infotype";
 		responseObj.messages[0].title = "Please select which information you need?";
 		responseObj.messages[0].replies = ["Jobs","Further Studies","Exit"];
 	}else if(req.body.result.parameters.qualification.length<=0){
@@ -37,16 +37,16 @@ router.post('/botHandler',function(req, res){
 			console.log('qualif',req.body.result.parameters["qualification"]);
 			delete responseObj.messages;
 		}else{
-			inputs["sessionId"]["currentInput"] = "qualification";
+			inputs[sessionId]["currentInput"] = "qualification";
 			responseObj.messages[0].title = "Please select your qualification";
 			responseObj.messages[0].replies = ["SSC","Intermediate","Graduation","Post graduation"];
 		}
 	}else if(req.body.result.parameters.qualification != 'SSC'&& req.body.result.parameters.branch.length<=0){
-		inputs["sessionId"]["currentInput"]= "branch";
+		inputs[sessionId]["currentInput"]= "branch";
 		responseObj.messages[0].title = "Please select your branch";
 		responseObj.messages[0].replies = careerConfig.input[req.body.result.parameters.qualification.toLowerCase()]
 	}else{
-		delete inputs["sessionId"];
+		delete inputs[sessionId];
 		let contextParams;
 		if(req.body.result.contexts.length>0){
 			contextParams ={
