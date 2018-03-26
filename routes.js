@@ -20,7 +20,7 @@ router.post('/botHandler',function(req, res){
 	if(inputs["sessionId"]["currentInput"]){
 		req.body.result.parameters[inputs["sessionId"]["currentInput"]]=req.body.result.resolvedQuery;
 	}	
-	var responseObj = careerConfig.input.inputResJson;
+	var responseObj = JSON.parse(JSON.stringify(careerConfig.input.inputResJson));
 	responseObj.contextOut[0].name = "542f6844-1eaa-4b89-8f3a-1e6b5ad5e3d0_id_dialog_context";
 	responseObj.contextOut[0].parameters = req.body.result.parameters;	
 
