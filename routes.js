@@ -37,6 +37,7 @@ router.post('/botHandler',function(req, res){
 	}else if(req.body.result.parameters.qualification.length<=0){
 		if(req.body.result.parameters.branch.length>0){
 			req.body.result.parameters["qualification"] = findQualification(req.body.result.parameters.branch);
+			req.body.result.parameters["qualification.original"] = findQualification(req.body.result.parameters.branch);
 			console.log(req.body.result.parameters);
 			console.log('qualif',req.body.result.parameters["qualification"]);
 			delete responseObj.messages;
