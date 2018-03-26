@@ -11,7 +11,7 @@ router.get('/',function(req, res){
 
 router.post('/botHandler',function(req, res){
 	//console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
-	//console.log('Dialogflow Request body: ' + JSON.stringify(req.body));	
+	console.log('Dialogflow Request body: ' + JSON.stringify(req.body));	
 	console.log(req.body.result.parameters);
 	var sessionId = (req.body.sessionId)?req.body.sessionId:'';
 	if(!inputs["sessionId"]){
