@@ -442,14 +442,356 @@ module.exports = {
 				{
 					text:{
 						name: "Diploma",
-						title: ""								
-					}                            
+						title: "Three Years course"								
+					},
+					collapsed: true,
+					children: [
+						{
+							text: {
+								name: "CSE",
+								title: "Computer Science & Engineering"								
+							}											
+						},
+						{
+							text: {
+								name: "ECE",
+								title: "Electronics & Communication Engineering"								
+							}											
+						},
+						{
+							text: {
+								name: "EEE",
+								title: "Electrical & Electronics Engineering"								
+							}											
+						},
+						{
+							text: {
+								name: "CIVIL",
+								title: "Civil Engineering"								
+							}											
+						},
+						{
+							text: {
+								name: "ME",
+								title: "Mechanical Engineering"								
+							}											
+						}
+					]                            
 				},
 				{
 					text:{
 						name: "ITI",
-						title: ""								
-					}                            
+						title: "Industrial Training Institute"								
+					},
+					collapsed: true,
+					children: [
+						{
+							text: {
+								name: "Electrician",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "Fitter",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "Carpenter",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "FM",
+								title: "Foundary Man"								
+							}											
+						},
+						{
+							text: {
+								name: "BB",
+								title: "Book Binder"								
+							}											
+						},
+						{
+							text: {
+								name: "Plumber",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "PM",
+								title: "Pattern Maker"								
+							}											
+						},
+						{
+							text: {
+								name: "MBC ",
+								title: "Mason Building Constructor"								
+							}											
+						},
+						{
+							text: {
+								name: "AW",
+								title: "Advanced Welding"								
+							}											
+						},
+						{
+							text: {
+								name: "Wireman",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "SMW",
+								title: "Sheet Metal Worker"								
+							}											
+						},
+						{
+							text: {
+								name: "TDM",
+								title: "Tool and Die Maker"								
+							}											
+						},
+						{
+							text: {
+								name: "Moulder",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "WGE",
+								title: "Welder Gas and Electric"								
+							}											
+						},
+						{
+							text: {
+								name: "Turner",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "ATDM",
+								title: "Advanced Tool and Die Making"								
+							}											
+						},
+						{
+							text: {
+								name: "PG",
+								title: "Painter General"								
+							}											
+						},
+						{
+							text: {
+								name: "Machinist ",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "DM",
+								title: "Draughtsman Mechanical"								
+							}											
+						},
+						{
+							text: {
+								name: "MMTM",
+								title: "Mechanic Machine Tools Maintenance"								
+							}											
+						},
+						{
+							text: {
+								name: "MCH",
+								title: "Mechanic Computer Hardware"								
+							}											
+						},
+						{
+							text: {
+								name: "MRAC",
+								title: "Mechanic Refrigeration and Air Conditioner"								
+							}											
+						},
+						{
+							text: {
+								name: "MWC",
+								title: "Mechanic Watch and Clock"								
+							}											
+						},
+						{
+							text: {
+								name: "MWV",
+								title: "Mechanic Motor Vehicle"								
+							}											
+						},
+						{
+							text: {
+								name: "MTM",
+								title: "Machine Tool Maintenance"								
+							}											
+						},
+						{
+							text: {
+								name: "MRT",
+								title: "Mechanic Radio and Television"								
+							}											
+						},
+						{
+							text: {
+								name: "MD",
+								title: "Mechanic Diesel"								
+							}											
+						},
+						{
+							text: {
+								name: "IM",
+								title: "Instrument Mechanic"								
+							}											
+						},
+						{
+							text: {
+								name: "IMCP",
+								title: "Instrument Mechanic Chemical Plant"								
+							}											
+						},
+						{
+							text: {
+								name: "ADS",
+								title: "Architectural Draughtsman ship"								
+							}											
+						},
+						{
+							text: {
+								name: "MEI",
+								title: "Metrology and Engineering Inspection"								
+							}											
+						},
+						{
+							text: {
+								name: "EM",
+								title: "Electrical Maintenance"								
+							}											
+						},
+						{
+							text: {
+								name: "Electroplater",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "COPA",
+								title: "Computer Operator and Programming Assistant"								
+							}											
+						},
+						{
+							text: {
+								name: "AE",
+								title: "Advanced Electronics"								
+							}											
+						},
+						{
+							text: {
+								name: "EM",
+								title: "Electronic Mechanic"								
+							}											
+						},
+						{
+							text: {
+								name: "NT",
+								title: "Network Technician"								
+							}											
+						},
+						{
+							text: {
+								name: "Machinist ",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "PPSMA",
+								title: "Pre Preparatory School Management Assistant"								
+							}											
+						},
+						{
+							text: {
+								name: "PT",
+								title: "Principles of Teaching"								
+							}											
+						},
+						{
+							text: {
+								name: "SP",
+								title: "Secretarial Practice"								
+							}											
+						},
+						{
+							text: {
+								name: "BC",
+								title: "Baker and Confectioner"								
+							}											
+						},
+						{
+							text: {
+								name: "CS",
+								title: "Cutting and Sewing"								
+							}											
+						},
+						{
+							text: {
+								name: "HSC",
+								title: "Hair and Skin care"								
+							}											
+						},
+						{
+							text: {
+								name: "SE",
+								title: "Stenography English"								
+							}											
+						},
+						{
+							text: {
+								name: "CAD CAM",
+								title: ""								
+							}											
+						},
+						{
+							text: {
+								name: "DTP",
+								title: "Desk Top Publishing Operator"								
+							}											
+						},
+						{
+							text: {
+								name: "IDD",
+								title: "Interior Decoration and Designing"								
+							}											
+						},
+						{
+							text: {
+								name: "HEA",
+								title: "Heat Engine Automobile"								
+							}											
+						},
+						{
+							text: {
+								name: "DCM",
+								title: "Driver Cum Mechanic Light Motor Vehicle"								
+							}											
+						},
+						{
+							text: {
+								name: "Surveyor",
+								title: ""								
+							}											
+						},
+					]					
 				}
 			]		                        
 		}
