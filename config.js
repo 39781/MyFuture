@@ -483,8 +483,7 @@ module.exports = {
 						name: "ITI",
 						title: "Industrial Training Institute"								
 					},
-					collapsed: true,
-					pseudo:true,
+					collapsed: true,					
 					children: [
 						{
 							text: {
