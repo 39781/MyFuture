@@ -192,11 +192,11 @@ var constructJson = function(infoObj){
 				chart: {
 					container: '#collapsable-example',
 					rootOrientation:  'WEST', // NORTH || EAST || WEST || SOUTH
-					// levelSeparation: 30,
-					siblingSeparation:   20,
+					levelSeparation: 30,
+					siblingSeparation:   100,
 					subTeeSeparation:    60,
 					scrollbar: "fancy",
-					//animateOnInit: true,
+					animateOnInit: true,
 					connectors: {
 						type: 'bCurve'
 					},

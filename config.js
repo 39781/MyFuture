@@ -131,8 +131,7 @@ module.exports = {
 					text: {
 						name: "Intermediate",
 						title: "Duration Two Years"								
-					},
-					childrenDropLevel: 1,
+					},					
 					collapsed: true,
 					children: [
 						{
@@ -169,16 +168,14 @@ module.exports = {
 							text:{
 								name: "Vocational Courses",
 								title: "Duration Two Years"								
-							},
-							childrenDropLevel: 1,
+							},							
 							collapsed: true,
 							children: [
 								{
 									text: {
 										name: "AC",
 										title: "Agriculture Courses"								
-									},
-									childrenDropLevel: 1,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -211,8 +208,7 @@ module.exports = {
 									text: {
 										name: "BCC",
 										title: "Business & Commerce Courses"								
-									},
-									childrenDropLevel: 2,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -251,8 +247,7 @@ module.exports = {
 									text: {
 										name: "ETC",
 										title: "Engineering & Technology Courses"								
-									},
-									childrenDropLevel: 3,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -309,8 +304,7 @@ module.exports = {
 									text: {
 										name: "HS",
 										title: "Home Sciences Courses"								
-									},
-									childrenDropLevel: 4,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -343,8 +337,7 @@ module.exports = {
 									text: {
 										name: "PC",
 										title: "Paramedical Courses"								
-									},
-									childrenDropLevel: 5,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -377,8 +370,7 @@ module.exports = {
 									text: {
 										name: "HO",
 										title: "Humanities & Other Courses"								
-									},
-									childrenDropLevel: 6,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -399,8 +391,7 @@ module.exports = {
 									text: {
 										name: "BCT",
 										title: "Bridge Courses Theory"								
-									},
-									childrenDropLevel: 7,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -427,8 +418,7 @@ module.exports = {
 									text: {
 										name: "BCP",
 										title: "Bridge Courses Practical"								
-									},
-									childrenDropLevel: 8,
+									},									
 									collapsed: true,
 									children: [
 										{
@@ -510,6 +500,6 @@ module.exports = {
 	},
 	"pg":{
 	},
-	html:"<html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><meta name='viewport' content='width=device-width'><title> infoTitle </title><link rel='stylesheet' href='https://limitless-lake-62312.herokuapp.com/Treant.css'><link rel='stylesheet' href='https://limitless-lake-62312.herokuapp.com/collapsable/collapsable.css'><link rel='stylesheet' href='https://limitless-lake-62312.herokuapp.com/vendor/perfect-scrollbar/perfect-scrollbar.css'></head><body>htmlContent<script src='https://limitless-lake-62312.herokuapp.com/vendor/raphael.js'></script><script src='https://limitless-lake-62312.herokuapp.com/Treant.js'></script><script src='https://limitless-lake-62312.herokuapp.com/vendor/jquery.min.js'></script><script src='https://limitless-lake-62312.herokuapp.com/vendor/jquery.easing.js'></script><script>configJson;tree = new Treant(careerConfig);</script><script>var xhr = new XMLHttpRequest();xhr.onreadystatechange = function() {console.log(this.readyState, this.status);if (this.readyState == 4 && this.status == 200) {console.log(this.responseText);}else{console.log(this.responseText);}};xhr.open('GET', 'https://limitless-lake-62312.herokuapp.com/shareMessageToBot/recipientId',true);xhr.send();</script></body></html>",	
+	html:"<html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><meta name='viewport' content='width=device-width'><title> infoTitle </title><link rel='stylesheet' href='https://limitless-lake-62312.herokuapp.com/Treant.css'><link rel='stylesheet' href='https://limitless-lake-62312.herokuapp.com/collapsable/collapsable.css?r=2'><style>p{white-space: nowrap !important;}</style><link rel='stylesheet' href='https://limitless-lake-62312.herokuapp.com/vendor/perfect-scrollbar/perfect-scrollbar.css'></head><body>htmlContent<script src='https://limitless-lake-62312.herokuapp.com/vendor/raphael.js'></script><script src='https://limitless-lake-62312.herokuapp.com/Treant.js'></script><script src='https://limitless-lake-62312.herokuapp.com/vendor/jquery.min.js'></script><script src='https://limitless-lake-62312.herokuapp.com/vendor/jquery.easing.js'></script><script>configJson;tree = new Treant(careerConfig);</script></body></html>",	
 }
 
